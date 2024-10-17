@@ -1,0 +1,130 @@
+@primary-color: black;
+@secondary-color: rgb(238 238 238);
+@highlight-color: #577562;
+
+.products-section {
+    padding: 10px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 30px;
+            color: @primary-color;
+            position: relative;
+            left: 220px;
+            top: 15px;
+        }
+
+        .shop-all {
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: @primary-color;
+                position: relative;
+                right: 220px;
+                top: 20px;
+
+                &:hover{
+                    color: @highlight-color;
+                }
+            }
+        }
+    }
+
+    .carousel-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .arrow {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            padding-top: 3px;
+            border: 1px solid rgb(238, 238, 238);
+            background-color: transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 33%;
+
+            &.left {
+                left: 155px;
+                
+            }
+
+            &.right {
+                right: 155px;
+            }
+
+            &:hover {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .products-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 80%;
+
+            .product {
+                flex: 0 0 200px;
+                text-align: center;
+                padding: 15px;
+                position: relative;
+
+
+                img {
+                    width: 225px;
+                    height: 305px;
+                }
+
+                .price {
+                    color: black;
+                    font-size: 15px;
+                    margin: 10px 0;
+                    font-weight: 530;
+                }
+
+                h3 {
+                    font-size: 14px;
+                    color: black;
+                    margin: 5px 0;
+                }
+
+                .rating {
+                    color: @highlight-color;
+                    font-size: 18px;
+                }
+
+                &.discount {
+                    .discount-tag {
+                        position: absolute;
+                        top: 23px;
+                        left: 20px;
+                        background: @highlight-color;
+                        color: white;
+                        padding: 5px;
+                        font-size: 12px;
+                    }
+
+                    .price {
+                        .old-price {
+                            text-decoration: line-through;
+                            color: @secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

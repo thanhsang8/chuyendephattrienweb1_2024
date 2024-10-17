@@ -9,7 +9,7 @@ $_id = NULL;
 $errors = [];
 
 if (!empty($_GET['id'])) {
-    $_id = $_GET['id'];
+    $_id = base64_encode($_GET['id']);
     $user = $userModel->findUserById($_id);//Update existing user
 }
 
@@ -50,29 +50,6 @@ if (!empty($_POST['submit'])) {
 </head>
 <body>
     <?php include 'views/header.php'?>
-    <?php
-        // hàm mã hóa
-        function encryptId($id) {
-            $key = 'your_secret_key'; 
-            return base64_encode(openssl_encrypt($id, 'aes-256-cbc', $key));
-        }
-
-        // mã hóa
-        function decryptId($encryptedId) {
-            $key = 'your_secret_key';
-            return openssl_decrypt(base64_decode($encryptedId), 'aes-256-cbc', $key);
-        }
-
-        // mã hóa id
-        if (!empty($_GET['id'])) {
-            $_id = decryptId($_GET['id']); 
-            $user = $userModel->findUserById($_id);
-        }
-
-        if (!empty($_id)) {
-            header('location: list_users.php?id=' . encryptId($_id));
-        }
-    ?>
 
     <div class="container">
            

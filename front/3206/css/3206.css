@@ -1,0 +1,101 @@
+.products-section {
+  padding: 10px;
+}
+.products-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.products-section .header h2 {
+  font-size: 30px;
+  color: black;
+  position: relative;
+  left: 220px;
+  top: 15px;
+}
+.products-section .header .shop-all a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  right: 220px;
+  top: 20px;
+}
+.products-section .header .shop-all a:hover {
+  color: #577562;
+}
+.products-section .carousel-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.products-section .carousel-wrapper .arrow {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding-top: 3px;
+  border: 1px solid #eeeeee;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 33%;
+}
+.products-section .carousel-wrapper .arrow.left {
+  left: 155px;
+}
+.products-section .carousel-wrapper .arrow.right {
+  right: 155px;
+}
+.products-section .carousel-wrapper .arrow:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.products-section .carousel-wrapper .products-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 80%;
+}
+.products-section .carousel-wrapper .products-container .product {
+  flex: 0 0 200px;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+.products-section .carousel-wrapper .products-container .product img {
+  width: 225px;
+  height: 305px;
+}
+.products-section .carousel-wrapper .products-container .product .price {
+  color: black;
+  font-size: 15px;
+  margin: 10px 0;
+  font-weight: 530;
+}
+.products-section .carousel-wrapper .products-container .product h3 {
+  font-size: 14px;
+  color: black;
+  margin: 5px 0;
+}
+.products-section .carousel-wrapper .products-container .product .rating {
+  color: #577562;
+  font-size: 18px;
+}
+.products-section .carousel-wrapper .products-container .product.discount .discount-tag {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  background: #577562;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+.products-section .carousel-wrapper .products-container .product.discount .price .old-price {
+  text-decoration: line-through;
+  color: #000000;
+}
